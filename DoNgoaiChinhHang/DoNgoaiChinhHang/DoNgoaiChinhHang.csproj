@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BE0BAFC-0B10-45A0-A693-A101AE66B205}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoNgoaiChinhHang</RootNamespace>
+    <AssemblyName>DoNgoaiChinhHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\cart.min.css" />
+    <Content Include="assets\css\category.css" />
+    <Content Include="assets\css\detail4.css" />
+    <Content Include="assets\css\home.css" />
+    <Content Include="assets\css\jquery.fancybox.css" />
+    <Content Include="assets\css\menu.css" />
+    <Content Include="assets\css\owl-carousel.css" />
+    <Content Include="assets\css\styles4.css" />
+    <Content Include="assets\img\banner-dongoaichinhhang-cam-ket-chinh-hang-100.jpg" />
+    <Content Include="assets\img\bo-khop-kirkland-glucosamine-chondroitin-hang-nhap-my-220-vien.jpg" />
+    <Content Include="assets\img\bo-xuong-khop-glucosamine-hcl-1500mg-chondroitin-msm-puritans-pride-240-vien.jpg" />
+    <Content Include="assets\img\cash.png" />
+    <Content Include="assets\img\chai-xit-stud100-chong-xuat-tinh-som-tang-do-cuong-cung-anh-quoc.jpg" />
+    <Content Include="assets\img\cham-soc-co-the-va-toan-than-1.png" />
+    <Content Include="assets\img\cham-soc-da-mat-1.png" />
+    <Content Include="assets\img\cham-soc-duong-da-mat-2.jpg" />
+    <Content Include="assets\img\cham-soc-toc-da-dau-1.png" />
+    <Content Include="assets\img\cham-soc-toc-rau-mi-long-may-2.jpg" />
+    <Content Include="assets\img\chinh-sach-ban-hang-dongoaichinhhang.jpg" />
+    <Content Include="assets\img\collagen-de-happy-10000mg-chong-lao-hoa-nhat-ban-hop-10-chai-x-50ml.jpg" />
+    <Content Include="assets\img\collagen-dhc-beauty-7000-hop-10-lo-x-50ml-nhat-ban.jpg" />
+    <Content Include="assets\img\collagen-refa-16-enriched-480ml-dang-nuoc-uong-cao-cap-cua-nhat.jpg" />
+    <Content Include="assets\img\collagen-shiseido-enriched-dang-nuoc-uong-nhat-ban-10-chai-x-50ml.jpg" />
+    <Content Include="assets\img\dau-ca-blackmores-odourless-fish-oil-mini-caps-400-vien-cua-uc.jpg" />
+    <Content Include="assets\img\dau-ca-healthy-care-fish-oil-omega-3-1000mg-uc-400-vien.jpg" />
+    <Content Include="assets\img\dau-ca-omega-3-orihiro-nhat-ban-tang-cuong-tri-nho-180-vien.jpg" />
+    <Content Include="assets\img\dnch.html" />
+    <Content Include="assets\img\dong-trung-ha-thao-nhat-ban-royal-gold-tohchukasou-vien-uong-cao-cap.jpg" />
+    <Content Include="assets\img\dongoaichinhhang-chinh-sach-ban-hang.jpg" />
+    <Content Include="assets\img\dongoaichinhhang.png" />
+    <Content Include="assets\img\duong-dai-mi-rivadouce-3ml-an-do.jpg" />
+    <Content Include="assets\img\elevit-uc-vitamin-tong-hop-cho-ba-bau.jpg" />
+    <Content Include="assets\img\embed%281%29.html" />
+    <Content Include="assets\img\embed.html" />
+    <Content Include="assets\img\fish-collagen-hanamai-nhat-bo-sung-collagen-ca-30-goi.jpg" />
+    <Content Include="assets\img\gel-boi-tron-cao-cap-durex-play-classic-50ml-anh.jpg" />
+    <Content Include="assets\img\gel-titan-gold-nga-tang-kich-thuoc-duong-vat-keo-dai-thoi-gian-quan-he.jpg" />
+    <Content Include="assets\img\giam-can-giam-mo-bung-3.jpg" />
+    <Content Include="assets\img\giao-hang.png" />
+    <Content Include="assets\img\giohang.png" />
+    <Content Include="assets\img\gioi-thieu-tinh-chat-24k-goldzan-ampoule-999-pure-gold-100ml.jpg" />
+    <Content Include="assets\img\glucosamine-1500mg-msm-puritans-pride-cua-my-180-vien-bo-xuong-khop.jpg" />
+    <Content Include="assets\img\google4_hdpi.png" />
+    <Content Include="assets\img\hammer-of-thor-cua-nga-chinh-hang-25ml-tang-cuong-sinh-ly-nam.jpg" />
+    <Content Include="assets\img\hat-chia-my-seed-nutiva-organic-907g.jpg" />
+    <Content Include="assets\img\hat-chia-uc-absolute-organic-huu-co-1kg-giam-can-tang-suc-khoe.jpg" />
+    <Content Include="assets\img\ho-tro-247.png" />
+    <Content Include="assets\img\ho-tro-xuong-khop-sun-ca-map-costar-shark-cartilage-750mg-uc-365-vien.jpg" />
+    <Content Include="assets\img\hoan-tra-tien.png" />
+    <Content Include="assets\img\hotline.png" />
+    <Content Include="assets\img\huyet-thanh-duong-da-trang-sang-7day-whitening-glutathione-700-v-ample.jpg" />
+    <Content Include="assets\img\icon-gift.png" />
+    <Content Include="assets\img\icon-giohang.png" />
+    <Content Include="assets\img\icon-ship.jpg" />
+    <Content Include="assets\img\iconShoppingCartFinnish.png" />
+    <Content Include="assets\img\ifship.png" />
+    <Content Include="assets\img\internet-banking.png" />
+    <Content Include="assets\img\iSearch.png" />
+    <Content Include="assets\img\kem-chong-nang-transino-whitening-day-protector-40ml-duong-trang-da-nhat-ban.jpg" />
+    <Content Include="assets\img\kem-duong-trang-da-3w-clinic-collagen-whitening-cream.jpg" />
+    <Content Include="assets\img\kem-duong-trang-da-cao-cap-7-day-whitening-program-glutathione-700-v-cream.jpg" />
+    <Content Include="assets\img\kem-lam-hong-nhu-hoa-tri-tham-nach-b3-black-off-esssence-100-nhat-ban.jpg" />
+    <Content Include="assets\img\kem-no-nguc-upsize-chinh-hang-tu-nga.jpg" />
+    <Content Include="assets\img\kem-tri-nam-tan-nhang-transino-whitening-essence-ex-30g-nhat-ban.jpg" />
+    <Content Include="assets\img\kem-tri-nam-trang-da-ban-dem-sakura-whitening-night-cream-30g-nhat-ban.jpg" />
+    <Content Include="assets\img\kem-tri-nam-transino-whitening-essence-ex-50g-nhat-ban.jpg" />
+    <Content Include="assets\img\kem-tri-seo-gentacin-nhat-ban-10gr.jpg" />
+    <Content Include="assets\img\kem-tri-tham-nach-ben-mong-nhu-hoa-vung-kin-ol-cell-50g-han-quoc.jpg" />
+    <Content Include="assets\img\keo-deo-ho-tro-ngu-ngon-vitafusion-beauty-sleep-gummies-vi-mam-xoi-90-vien.jpg" />
+    <Content Include="assets\img\keo-gau-moc-toc-hair-vitamins-sugarbearhair-60-vien-cua-my.jpg" />
+    <Content Include="assets\img\keo-tho-moc-toc-hair-vitamin-sweet-bunny-hare-60-vien.jpg" />
+    <Content Include="assets\img\liquid-collagen-dang-nuoc-easy-to-take-drink-mix-applied-nutrition-cua-my-20-ong-x-10ml.jpg" />
+    <Content Include="assets\img\mam-dau-nanh-super-lecithin-1200mg-healthy-care-100-vien-uc.jpg" />
+    <Content Include="assets\img\mat-na-bun-hello-kitty-nhat-ban-hop-10-goi-15ggoi.jpg" />
+    <Content Include="assets\img\mat-na-duong-am-cho-da-tu-thien-nhien-innisfree-my-real-squeeze-mask-1-mieng.jpg" />
+    <Content Include="assets\img\mat-na-miung-lab-lany-beau-duong-am-chong-lao-hoa-sang-da-han-quoc-hop-7-mieng.jpg" />
+    <Content Include="assets\img\move-free-joint-health-advanced-200-schiff-vien-uong-bo-khop-cua-my.jpg" />
+    <Content Include="assets\img\muoi-massage-tan-mo-dui-loai-bo-sam-den-vung-mong-body-salt-cleanser-ex-nhat-ban.jpg" />
+    <Content Include="assets\img\my-pham-dac-tri-2.jpg" />
+    <Content Include="assets\img\my-pham-dac-tri-3.jpg" />
+    <Content Include="assets\img\my-pham-dac-tri-4.jpg" />
+    <Content Include="assets\img\my-pham-dac-tri-chinh-hang-1.png" />
+    <Content Include="assets\img\my-pham-trang-diem-moi-ngay-1.png" />
+    <Content Include="assets\img\nam-thai-duong-dx-nui-yuuki-360-vien-nhat-ban.jpg" />
+    <Content Include="assets\img\nuoc-hoa-giotti-blooming-chatler-50ml-phap.jpg" />
+    <Content Include="assets\img\nuoc-hoa-hong-some-by-mi-aha-bha-pha-miracle-toner-30-days-150ml.jpg" />
+    <Content Include="assets\img\nuoc-hoa-hong-transino-whitening-clear-lotion-175ml-tri-nam-nhat-ban.jpg" />
+    <Content Include="assets\img\nuoc-hong-sam-han-quoc-co-cu-kgs-cao-cap-120ml-x-10-chai.jpg" />
+    <Content Include="assets\img\nuoc-uong-collagen-shiseido-ex-dep-da-hop-10-lo-moi-lo-50ml.jpg" />
+    <Content Include="assets\img\nuoc-uong-dep-da-va-giam-can-dr-select-finozyme-310-nhat-ban.jpg" />
+    <Content Include="assets\img\nuoc-uong-giam-can-thai-doc-to-coconut-detox.jpg" />
+    <Content Include="assets\img\nuoc-uong-neocell-collagen-c-c-pomegranate-4000mg-16oz-473ml-cua-my.jpg" />
+    <Content Include="assets\img\one-a-day-womens-formula-vitamins-cua-my-300-vien-vitamin-tong-hop-cho-phu-nu.jpg" />
+    <Content Include="assets\img\pixel%281%29.html" />
+    <Content Include="assets\img\pixel.html" />
+    <Content Include="assets\img\san-pham-khuyen-mai-hot-1.png" />
+    <Content Include="assets\img\saved_resource%281%29.html" />
+    <Content Include="assets\img\saved_resource%282%29.html" />
+    <Content Include="assets\img\saved_resource%283%29.html" />
+    <Content Include="assets\img\saved_resource.html" />
+    <Content Include="assets\img\serum-duong-may-feg-eyebrow-enhancer-my-3ml-100-tu-nhien-giup-long-may-dai-va-day-hon.jpg" />
+    <Content Include="assets\img\serum-duong-mi-feg-eyelash-enhancer-mi-dai-cong-tu-nhien.jpg" />
+    <Content Include="assets\img\serum-duong-mi-feg-eyelash-pro-advanced-3ml-my.jpg" />
+    <Content Include="assets\img\serum-kich-thich-moc-long-may-revitabrow-advanced-cua-my.jpg" />
+    <Content Include="assets\img\serum-tri-mun-tai-tao-da-ba-lao.jpg" />
+    <Content Include="assets\img\serum-vitamin-c-melano-cc-rohto-nhat-tri-tham-nam-tan-nhang.jpg" />
+    <Content Include="assets\img\siloflamm-50mg-thuoc-cuong-duong-cua-an-do-4-vien-tri-roi-loan-cuong-duong.jpg" />
+    <Content Include="assets\img\sua-non-alpha-lipid-lifeline-450g-new-zealand-cham-soc-suc-khoe-toan-dien.jpg" />
+    <Content Include="assets\img\sua-rua-mat-neutrogena-visibly-clear-gel-150ml-tai-tao-da-cua-my.jpg" />
+    <Content Include="assets\img\suc-khoe-dinh-duong-2.jpg" />
+    <Content Include="assets\img\tao-luc-chlorella-royal-dx-nhat-ban-1550-vien-bo-sung-duong-chat-toan-dien.jpg" />
+    <Content Include="assets\img\tao-mat-troi-spirulina-gold-plus-500mg-my-180-vien-giai-phap-tang-can.jpg" />
+    <Content Include="assets\img\tao-mat-troi-spirulina-gold-plus-500mg-my-360-vien-giai-phap-tang-can.jpg" />
+    <Content Include="assets\img\tao-xoan-spirulina-algae-2400-vien-nhat-ban-cung-cap-vitamin.jpg" />
+    <Content Include="assets\img\thanh-toan.png" />
+    <Content Include="assets\img\the-collagen-shiseido-dang-vien-uong-dep-da-nhat-ban-126-vien.jpg" />
+    <Content Include="assets\img\thong-tin.png" />
+    <Content Include="assets\img\thuc-pham-chuc-nang-1.png" />
+    <Content Include="assets\img\thuoc-blackmores-glucosamine-1500mg-one-a-day-uc-180vien-bo-xuong-khop.jpg" />
+    <Content Include="assets\img\thuoc-giam-dau-advil-ibuprofen-200mg-cua-my-300-vien.jpg" />
+    <Content Include="assets\img\thuoc-kich-thich-moc-rau-nakashima-nhat-ban.jpg" />
+    <Content Include="assets\img\thuoc-moc-long-mu-nakashima-nam-nu-10ml-nhat-ban-moc-long-vung-kin.jpg" />
+    <Content Include="assets\img\thuoc-moc-rau-kaminomoto-nhat-ban.jpg" />
+    <Content Include="assets\img\thuoc-moc-rau-nakashima-nhat-ban.jpg" />
+    <Content Include="assets\img\thuoc-moc-toc-qik-hair-stpaul-brands-cua-my-30-vien-danh-cho-nu.jpg" />
+    <Content Include="assets\img\thuoc-moc-toc-qik-hair.jpg" />
+    <Content Include="assets\img\thuoc-nho-mat-rohto-vita-40-nhat.jpg" />
+    <Content Include="assets\img\thuoc-rocket-1h-thuoc-cuong-duong-tang-cuong-sinh-luc-phai-manh-rocket-1-gio.jpg" />
+    <Content Include="assets\img\thuoc-youtheory-turmeric-1000mg-60-vien-my-tinh-chat-nghe-tang-cuong-suc-khoe.jpg" />
+    <Content Include="assets\img\thuong-hieu-bifina-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-blackmores-uc-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-dhc-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-goodhealth-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-hang-dau-1.png" />
+    <Content Include="assets\img\thuong-hieu-hang-dau-2.jpg" />
+    <Content Include="assets\img\thuong-hieu-healthy-care-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-innisfree-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-kaminomoto-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-kirkland-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-natrol-biotin-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-nature-made-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-neocell-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-orihiro-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-scar-heal-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-shiseido-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-transino-3.jpg" />
+    <Content Include="assets\img\thuong-hieu-youtheory-3.jpg" />
+    <Content Include="assets\img\tinh-chat-duong-mi-dhc-eyelash-tonic-nhat-ban-doi-mi-se-dai-va-day-hon.jpg" />
+    <Content Include="assets\img\tinh-chat-hau-tuoi-toi-nghe-orihiro-nhat-ban-bo-gan-than-trang-duong.jpg" />
+    <Content Include="assets\img\tinh-chat-mam-dau-nanh-puritans-pride-soy-lecithin-1325mg-100-vien-cua-my.jpg" />
+    <Content Include="assets\img\tinh-chat-mam-dau-nanh-puritans-pride-soy-lecithin-1325mg-250-vien-cua-my.jpg" />
+    <Content Include="assets\img\tinh-chat-nuoc-viet-quat-neocell-hyaluronic-acid-blueberry-liquid-473ml-cua-my.jpg" />
+    <Content Include="assets\img\tinh-dau-thong-do-han-quoc-red-pine-gold-450mg-hop-100-vien.jpg" />
+    <Content Include="assets\img\tra-giam-can-green-tea-fat-burner-cua-my-200-vien.jpg" />
+    <Content Include="assets\img\tra-giam-can-orihiro-night-diet-tea-nhat-ban.jpg" />
+    <Content Include="assets\img\tre-hoa-lan-da-voi-nhau-thai-cuu-costar-35000mg-x-100-vien.jpg" />
+    <Content Include="assets\img\vien-bo-khop-schiff-glucosamine-2000mg-plus-vitamin-d3-my-150-vien.jpg" />
+    <Content Include="assets\img\vien-bo-nao-ginkgo-biloba-2000-mg-healthy-care-cua-uc-100-vien.jpg" />
+    <Content Include="assets\img\vien-giai-doc-phoi-healthy-care-original-lung-detox.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-1.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-2.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-3.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-anh-0001.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-anh-001.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-anh-01.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-anh-1.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien-anh-2.jpg" />
+    <Content Include="assets\img\vien-nhai-bo-sung-vitamin-c-healthy-care-500mg-uc-500-vien.jpg" />
+    <Content Include="assets\img\vien-sui-trang-da-neuglow-l-glutathione-premium-white-my-28-vien.jpg" />
+    <Content Include="assets\img\vien-tinh-chat-nghe-ho-tro-dieu-tri-viem-loet-da-day-turmeric-curcumin-1000mg-puritans-pride-my-hop-60-vien.jpg" />
+    <Content Include="assets\img\vien-tri-nam-transinowhitening-nhat-ban.jpg" />
+    <Content Include="assets\img\vien-uong-biotin-moc-toc-5000-mcg-fast-dissolve-250v.jpg" />
+    <Content Include="assets\img\vien-uong-blackmores-celery-3000-phong-va-dieu-tri-gut-cua-uc-50-vien.jpg" />
+    <Content Include="assets\img\vien-uong-blackmores-reme-d-cua-uc-giam-dau-nua-dau-tien-dinh-60-vien.jpg" />
+    <Content Include="assets\img\vien-uong-bo-mat-lutein-20-mg-puritans-pride-my.jpg" />
+    <Content Include="assets\img\vien-uong-bo-nao-dpadhaepavitamin-e-orihiro-120-vien.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-collagen-tuoi-dhc-nhat-ban-chiet-xuat-tu-ca-bien.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-nuoc-va-collagen-innerb-aqua-rich-56-vien-cua-han-quoc.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-ostelin-vitamin-d-calcium-cua-uc.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-sat-iron-nature-made-65mg-365-vien-cua-my.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-sat-nature-made-iron-65-mg-180-vien-cua-my.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-vitamin-c-dhc-60-ngay-cua-nhat-ban-120-vien.jpg" />
+    <Content Include="assets\img\vien-uong-bo-sung-vitamin-tong-hop-dhc-nhat-ban-60-vien-60-ngay.jpg" />
+    <Content Include="assets\img\vien-uong-bo-tim-mach-coq10-300mg-kirkland-chinh-hang-cua-my.jpg" />
+    <Content Include="assets\img\vien-uong-cap-nuoc-aqua-rich-innerb-cheiljedang-han-quoc-70-vien.jpg" />
+    <Content Include="assets\img\vien-uong-chondroitin-sulfate-zs-bo-xuong-khop-cao-cap-270-vien.jpg" />
+    <Content Include="assets\img\vien-uong-chong-nang-nhat-fine-uv-japan-loai-tot-nhat-goi-30-vien.jpg" />
+    <Content Include="assets\img\vien-uong-collagen-type-1-2-3-cho-nam-youtheory-mens-my-390-vien.jpg" />
+    <Content Include="assets\img\vien-uong-collagen-youtheory-type-1-2-3-my-290-vien-chong-lao-hoa-da.jpg" />
+    <Content Include="assets\img\vien-uong-davinci-disc-discovery-ho-tro-thoat-vi-dia-dem-my-180-vien.jpg" />
+    <Content Include="assets\img\vien-uong-dieu-tri-tai-bien-orihiro-nattokinase-2000fu-60vien-nhat-ban.jpg" />
+    <Content Include="assets\img\vien-uong-focus-factor-cua-my-giup-tang-cuong-tri-nho-giam-stress-150-vien.jpg" />
+    <Content Include="assets\img\vien-uong-giam-can-dhc-giam-can-hieu-qua-nhanh-chong.jpg" />
+    <Content Include="assets\img\vien-uong-giam-can-fuji-diet-nhat-ban-60-goi.jpg" />
+    <Content Include="assets\img\vien-uong-giam-can-oz-slim-natural-pure-safe-cua-my-40-vien.jpg" />
+    <Content Include="assets\img\vien-uong-giam-dau-advil-liqui-gels-cua-my-120-vien.jpg" />
+    <Content Include="assets\img\vien-uong-giam-mo-bung-rohto-3750mg-nhat-ban-dep-da-gon-dang-252-vien.jpg" />
+    <Content Include="assets\img\vien-uong-giam-stress-blackmores-executive-b-stress-formula-28-vien-uc.jpg" />
+    <Content Include="assets\img\vien-uong-ho-tro-giac-ngu-blackmores-valerian-forte-2000mg-uc.jpg" />
+    <Content Include="assets\img\vien-uong-mam-dau-nanh-natrol-soy-isoflavones-cho-nu-cua-my-120-vien.jpg" />
+    <Content Include="assets\img\vien-uong-moc-toc-dhc-cua-nhat-ban-90-vien.jpg" />
+    <Content Include="assets\img\vien-uong-natrol-5-htp-mood-relaxation-ho-tro-giam-cang-thang.jpg" />
+    <Content Include="assets\img\vien-uong-natures-bounty-hair-skin-nails-cai-thien-rung-toc-da-khoe-mong-chac-250-vien-my.jpg" />
+    <Content Include="assets\img\vien-uong-nhau-thai-cuu-ex-placenta-nhat-120vien-dep-da-ngua-lao-hoa.jpg" />
+    <Content Include="assets\img\vien-uong-nhau-thai-cuu-uc-costar-placentra-gold-plus-loai-50000mg-100-vien.jpg" />
+    <Content Include="assets\img\vien-uong-nhuy-hoa-nghe-tay-giam-can-beauty-saff-slimfit-han-quoc.jpg" />
+    <Content Include="assets\img\vien-uong-night-diet-orihiro-hop-60-goi-giam-can-nhat-ban.jpg" />
+    <Content Include="assets\img\vien-uong-no-nguc-bbb-best-beauty-body-orihiro-nhat-ban-300-vien.jpg" />
+    <Content Include="assets\img\vien-uong-sun-vi-ca-map-orihiro-nhat-ban-360-vien.jpg" />
+    <Content Include="assets\img\vien-uong-sun-vi-ca-map-uc-healthy-care-shark-cartilage-750mg-365-vien.jpg" />
+    <Content Include="assets\img\vien-uong-tang-mien-dich-swisse-vitamin-c-manuka-honey-uc.jpg" />
+    <Content Include="assets\img\vien-uong-tao-mui-thom-co-the-cua-nhat-ban-dhc-40-vien.jpg" />
+    <Content Include="assets\img\vien-uong-thom-mieng-breath-pearls-50-vien-cua-uc.jpg" />
+    <Content Include="assets\img\vien-uong-tieu-mo-giam-can-dhc-nhat-ban-da-xinh-dang-dep-voi.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-angels-liquid-glutathione-ever-collagen-han-quoc-72-vien.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-collagen-placenta-5-in-1-cua-nhat-270-vien.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-relumins-advance-white-glutathione-1650mg-my-90vien.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-relumins-vitamin-c-complex-180-vien-cua-my.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-tri-nam-shiseido-pure-white-240-vien-cua-nhat-ban.jpg" />
+    <Content Include="assets\img\vien-uong-trang-da-vitamin-c-l-cystine-natura-white-c-premium-nhat-ban-180-vien.jpg" />
+    <Content Include="assets\img\vien-uong-transamin-500mg-trang-da-tri-nam-nhat-ban-100-vien.jpg" />
+    <Content Include="assets\img\vien-uong-tri-nam-sakura-hcl-white-blossom-120-vien-cua-nhat-ban.jpg" />
+    <Content Include="assets\img\vitamin-c-1000mg-puritans-pride-hop-100-vien-vitamin-c-cua-my.jpg" />
+    <Content Include="assets\img\vitamin-childlife-tong-hop-237ml-my.jpg" />
+    <Content Include="assets\img\vitamin-e-zentiva-200mg-do-hop-30-vien-nga.jpg" />
+    <Content Include="assets\img\vitamin-tong-hop-centrum-silver-adults-50-325-vien-cua-my.jpg" />
+    <Content Include="assets\img\zalo-barcode.png" />
+    <Content Include="assets\js\analytics.js" />
+    <Content Include="assets\js\category.js" />
+    <Content Include="assets\js\common.js" />
+    <Content Include="assets\js\common1.js" />
+    <Content Include="assets\js\controls.js" />
+    <Content Include="assets\js\details4.js" />
+    <Content Include="assets\js\f%281%29.txt" />
+    <Content Include="assets\js\f%282%29.txt" />
+    <Content Include="assets\js\f%283%29.txt" />
+    <Content Include="assets\js\f%284%29.txt" />
+    <Content Include="assets\js\f%285%29.txt" />
+    <Content Include="assets\js\f.js" />
+    <Content Include="assets\js\fbevents.js" />
+    <Content Include="assets\js\init_embed.js" />
+    <Content Include="assets\js\jquery.elevatezoom.js" />
+    <Content Include="assets\js\jquery.fancybox.js" />
+    <Content Include="assets\js\jquery.jcarousellite.js" />
+    <Content Include="assets\js\jquery.sticky.js" />
+    <Content Include="assets\js\map.js" />
+    <Content Include="assets\js\onion.js" />
+    <Content Include="assets\js\order.js" />
+    <Content Include="assets\js\overlay.js" />
+    <Content Include="assets\js\response.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\search_impl.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\js\299092611415381" />
+    <Content Include="assets\js\css" />
+    <Content Include="assets\js\css%281%29" />
+    <Content Include="assets\js\js" />
+    <Content Include="assets\js\js%281%29" />
+    <Content Include="assets\js\js%282%29" />
+    <Content Include="assets\js\js%283%29" />
+    <Content Include="assets\js\vt" />
+    <Content Include="assets\js\vt%281%29" />
+    <Content Include="assets\js\vt%282%29" />
+    <Content Include="assets\js\vt%283%29" />
+    <Content Include="assets\js\vt%284%29" />
+    <Content Include="assets\js\vt%285%29" />
+    <Content Include="assets\js\vt%286%29" />
+    <Content Include="assets\js\vt%287%29" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57400</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44316/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

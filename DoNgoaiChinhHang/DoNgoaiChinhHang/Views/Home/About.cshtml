@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div class="breadcrumb">
+    <ul>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="https://dongoaichinhhang.com/" itemprop="url" title="Đồ Ngoại Chính Hãng">
+                <span itemprop="title" class="iH"></span>
+            </a><span>›</span>
+        </li>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="https://dongoaichinhhang.com/dang-nhap.html" itemprop="url" title="Đăng nhập">
+                <span itemprop="title">Đăng nhập</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="boxct bica">
+    <div>
+        <img src="~/assets/img/chinh-sach-ban-hang-dongoaichinhhang.jpg" />
+    </div>
+    <div class="form-order clearfix">
+        <h1 class="form-order-hd"><i class="fa fa-play"></i> Đăng nhập thành viên</h1>
+        <form class="form-inline" id="formQuickOrder">
+            <div class="iUs"></div><input type="email" class="form-control" id="txtEmail"
+                                          placeholder="Email (*)" style="max-width:500px">
+            <div class="iUs"></div><input type="password" class="form-control" id="txtPassword"
+                                          placeholder="Mật khẩu (*)" style="max-width:500px">
+            <div class="form-div col-xs-12" style="text-align: center">
+                <br><a class="btn btn-primary"
+                       href="javascript:SubmitLogin();" id="btLogin">ĐĂNG NHẬP</a>
+                <div id="returnProcess"></div>
+            </div><br>
+        </form>
+    </div>
+</div>
+<br>
+<br>
