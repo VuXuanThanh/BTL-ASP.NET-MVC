@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace DoNgoaiChinhHang.Controllers
 {
-    public class DefaultController : Controller
+    public class CategoriesController : Controller
     {
-        // GET: Default
+        // GET: Categories
         public ActionResult Index()
         {
             return View();

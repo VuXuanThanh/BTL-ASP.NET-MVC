@@ -25,6 +25,8 @@ namespace DoNgoaiChinhHang.Models
         [StringLength(4000)]
         public string Description { get; set; }
 
+        public string Images { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Category> Categories { get; set; }
 

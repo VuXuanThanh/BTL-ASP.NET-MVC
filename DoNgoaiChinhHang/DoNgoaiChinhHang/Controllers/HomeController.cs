@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoNgoaiChinhHang.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,15 @@ namespace DoNgoaiChinhHang.Controllers
 {
     public class HomeController : Controller
     {
+        private DoNgoaiChinhHangDB db = new DoNgoaiChinhHangDB();
         public ActionResult Index()
         {
-            return View();
+            #region get Category
+            var categoryBases = db.CategoryBases.ToList();
+            
+            
+            #endregion
+            return View(categoryBases);
         }
 
         public ActionResult About()

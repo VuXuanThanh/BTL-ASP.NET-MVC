@@ -1,46 +1,66 @@
-﻿@{
+﻿@using DoNgoaiChinhHang.Models
+@model IEnumerable<CategoryBase>
+@{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="~/assets/css/cart.min.css" rel="stylesheet" />
+<link href="~/assets/css/home.css" rel="stylesheet" />
+<link href="~/assets/css/owl-carousel.css" rel="stylesheet" />
+<link href="~/assets/css/styles4.css" rel="stylesheet" />
+<link href="~/assets/css/menu.css" rel="stylesheet" />
 <h1 class="hdn">dongoaichinhhang.com Hệ thống phân phối hàng chính hãng số 1 Việt Nam</h1>
 <nav class="menu">
     <ul class="list-cat-icon">
-        // Category
-        <li class="has-cat-mega" data-submenu-id="submenu-164">
-            <h4>
-                <img src="~/assets/img/thuc-pham-chuc-nang-1.png" alt="Thực phẩm Chức Năng">
-                <a href="https://dongoaichinhhang.com/danh-muc/thuc-pham-chuc-nang.html"
-                   title="Thực phẩm Chức Năng">
-                    Thực phẩm Chức Năng
-                </a>
-            </h4>
-            <div id="submenu-164" class="cat-mega-menu cat-mega-style1">
-                <div class="banner-img">
+        @*Category base*@
+        @foreach (var item in Model)
+        {
+
+            <li class="has-cat-mega" data-submenu-id="submenu-164">
+                <h4>
+                    <img src="~/assets/img/thuc-pham-chuc-nang-1.png" alt="@item.CategoryBaseName">
                     <a href="https://dongoaichinhhang.com/danh-muc/thuc-pham-chuc-nang.html"
-                       title="Thực phẩm Chức Năng">
-                        <img data-src="/imgs/suc-khoe-dinh-duong-2.jpg"
-                             alt="Thực phẩm Chức Năng" class="lazy"
-                             src="./assets/img/suc-khoe-dinh-duong-2.jpg"
-                             style="display: inline; opacity: 1;">
+                       title="@item.CategoryBaseName">
+                        @item.CategoryBaseName
                     </a>
-                </div>
-
-                <aside>
-                    <strong class="hmb">
+                </h4>
+                <div id="submenu-164" class="cat-mega-menu cat-mega-style1">
+                    <div class="banner-img">
                         <a href="https://dongoaichinhhang.com/danh-muc/thuc-pham-chuc-nang.html"
-                           title="Thực phẩm Chức Năng">
-                            Thực phẩm Chức Năng
+                           title="@item.CategoryBaseName">
+                            @{
+                                string ImgPath = "~/assets/img/" + item.Images;
+
+                            }
+                            <img data-src="/imgs/suc-khoe-dinh-duong-2.jpg"
+                                 alt="@item.CategoryBaseName" class="lazy"
+                                 src="@Url.Content(ImgPath)"
+                                 style="display: inline; opacity: 1;">
                         </a>
-                    </strong>
-                    <a href="https://dongoaichinhhang.com/danh-muc/collagen.html" title="Collagen">
-                        Collagen
-                    </a>
+                    </div>
+
+                    <aside>
+                        <strong class="hmb">
+                            <a href="https://dongoaichinhhang.com/danh-muc/thuc-pham-chuc-nang.html"
+                               title="@item.CategoryBaseName">
+                                @item.CategoryBaseName
+                            </a>
+                        </strong>
+
+                        @*category item*@
 
 
-                </aside>
-            </div>
-        </li>
+                        @foreach (var itemCategory in item.Categories)
+                        {
+                            <a href="https://dongoaichinhhang.com/danh-muc/collagen.html" title="Collagen">
+                                @itemCategory.CategoryName
+                            </a>
+                        }
+
+                    </aside>
+                </div>
+            </li>
+        }
 
     </ul>
 </nav>

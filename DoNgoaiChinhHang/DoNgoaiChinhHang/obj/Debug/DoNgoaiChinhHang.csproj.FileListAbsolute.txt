@@ -159,4 +159,3 @@ E:\ASP.NET MVC\Bài tập lớn\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHan
 E:\ASP.NET MVC\Bài tập lớn\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\EntityFramework.SqlServer.dll
 E:\ASP.NET MVC\Bài tập lớn\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\EntityFramework.xml
 E:\ASP.NET MVC\Bài tập lớn\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\EntityFramework.SqlServer.xml
-E:\ASP.NET MVC\Bài tập lớn\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.csproj.AssemblyReference.cache
