@@ -52,6 +52,9 @@ $(".addPro").click(function (e) {
             success: function (result) {
                 if (result) {
                     alert("Thêm mới thành công")
+                    $.each(formData, function (i, v) {
+                        $('#' + v.name).val("");
+                    });
                 }
                 else {
                     alert("Mã sản phẩm đã tồn tại")
