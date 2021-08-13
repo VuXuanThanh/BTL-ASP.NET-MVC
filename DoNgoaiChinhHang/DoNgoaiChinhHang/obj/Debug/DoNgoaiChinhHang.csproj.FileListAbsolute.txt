@@ -162,3 +162,4 @@ D:\CNTT\Hoc Ky He 3\MVC\BTL\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bi
 D:\CNTT\Hoc Ky He 3\MVC\BTL\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\PagedList.Mvc.dll
 D:\CNTT\Hoc Ky He 3\MVC\BTL\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\PagedList.xml
 D:\CNTT\Hoc Ky He 3\MVC\BTL\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\PagedList.Mvc.xml
+D:\CNTT\Hoc Ky He 3\MVC\BTL\BTL-ASP.NET-MVC\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.csproj.AssemblyReference.cache
