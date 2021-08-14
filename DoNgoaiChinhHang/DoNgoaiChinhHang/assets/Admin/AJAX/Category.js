@@ -110,7 +110,9 @@ $(".editCate").click(function (e) {
                 thongbao("Thành công !", "Sửa danh mục thành công .", "animated fadeInDown", "success");
                 setTimeout(() => {
                     window.location.href = "https://localhost:44316/Admin/Categories";
-                },1000)
+                }, 1000)
+
+
             }
 
         },

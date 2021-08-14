@@ -44,6 +44,39 @@
             </div>
             <hr style="margin: 0" />
             <div class="card-block">
+
+                <div class="form-group row">
+                    <div class="col-md-8">
+                        <div class="input-group" id="dropdown1">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-info waves-effect waves-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sắp xếp
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="@Url.Action("Index", "CategoryBases", new { sort = ViewBag.SapTheoTen, currentFilter = ViewBag.CurrentFilter })">Theo tên</a>
+                                    <div role="separator" class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Khác</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        @using (Html.BeginForm())
+                        {<div class="input-group">
+                                <input id="btnaddon2" name="searchString" type="text" value="@ViewBag.CurrentFilter" class="form-control" placeholder="Nhập tên danh mục" aria-describedby="btn-addon2">
+                                <span class="input-group-btn" id="btn-addon2">
+                                    <button type="submit" class="btn btn-info waves-effect waves-light">
+                                        Tìm kiếm
+                                    </button>
+                                </span>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+                <hr />
                 <table class="table">
                     <tr>
                         <th style="min-width: 120px;">
@@ -77,7 +110,7 @@
                             <td>
                                 @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryBaseID.Trim() }, new { @class = "btn btn-inverse-warning waves-effect waves-light", })
 
-                                <button id="@item.CategoryBaseID.Trim()" class="btn btn-inverse-info waves-effect waves-light delBaseCate">Xóa</button>
+                                <button id="@item.CategoryBaseID.Trim()" class="btn btn-inverse-danger waves-effect waves-light delBaseCate">Xóa</button>
                             </td>
                         </tr>
                     }
