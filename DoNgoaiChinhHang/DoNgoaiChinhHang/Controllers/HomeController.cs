@@ -12,12 +12,9 @@ namespace DoNgoaiChinhHang.Controllers
         private DoNgoaiChinhHangDB db = new DoNgoaiChinhHangDB();
         public ActionResult Index()
         {
-            #region get Category
-            var categoryBases = db.CategoryBases.ToList();
-            
-            
-            #endregion
-            return View(categoryBases);
+            ViewBag.categoryBases = db.CategoryBases.ToList();
+            var products = db.Products.ToList();
+            return View(products);
         }
 
         public ActionResult About()
