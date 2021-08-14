@@ -22,7 +22,7 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
         [StringLength(10)]
         public string CategoryID { get; set; }
 
-        [StringLength(100)]
+        [StringLength(200)]
         public string ProductName { get; set; }
 
         [StringLength(200)]
@@ -30,7 +30,7 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
 
         public int? Evaluation { get; set; }
 
-        [StringLength(12)]
+        [StringLength(50)]
         public string Brand { get; set; }
 
         [StringLength(50)]
@@ -38,17 +38,23 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
 
         public float? Price { get; set; }
 
-        [StringLength(500)]
         public string Benefit { get; set; }
 
         [StringLength(4000)]
         public string Introduction { get; set; }
 
-        [StringLength(500)]
+        [StringLength(1000)]
         public string Element { get; set; }
 
-        [StringLength(50)]
+        [StringLength(1000)]
         public string Tutorial { get; set; }
+
+        public float? Discount { get; set; }
+
+        public bool? Freeship { get; set; }
+
+        [StringLength(1000)]
+        public string Description { get; set; }
 
         public virtual Category Category { get; set; }
 

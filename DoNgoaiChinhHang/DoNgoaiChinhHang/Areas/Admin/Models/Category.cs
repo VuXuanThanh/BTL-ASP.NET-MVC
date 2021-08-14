@@ -1,8 +1,7 @@
-﻿namespace DoNgoaiChinhHang.Areas.Admin.Models
+namespace DoNgoaiChinhHang.Areas.Admin.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -17,25 +16,19 @@
         }
 
         [StringLength(10)]
-        [DisplayName("Mã danh mục")]
         public string CategoryID { get; set; }
 
         [StringLength(50)]
-        [DisplayName("Tên danh mục")]
-
         public string CategoryName { get; set; }
 
         [StringLength(4000)]
-
-        [DisplayName("Mô tả")]
-
         public string Description { get; set; }
 
         [Required]
         [StringLength(10)]
-        [DisplayName("Danh mục cha")]
-
         public string CategoryBaseID { get; set; }
+
+        public string Images { get; set; }
 
         public virtual CategoryBase CategoryBase { get; set; }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Trang quản trị</title>
+    <title>@ViewBag.Title</title>
 
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -116,11 +116,18 @@
     <script type="text/javascript" src="~/assets/Admin/pages/elements.js"></script>
     <script src="~/assets/Admin/js/menu.min.js"></script>
 
+    <script src="~/assets/Admin/js/ThongBaoNoi.js"></script>
+
     <script src="~/assets/Admin/AJAX/CategoryBases.js"></script>
     <script src="~/assets/Admin/AJAX/Category.js"></script>
     <script src="~/assets/Admin/AJAX/Product.js"></script>
 
-
+    <script>
+        function loadFile(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
 
 </body>
 

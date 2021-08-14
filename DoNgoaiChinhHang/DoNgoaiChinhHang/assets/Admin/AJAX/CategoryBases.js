@@ -9,10 +9,12 @@
             data: { id: id },
             success: function (result) {
                 if (result == true) {
-                    alert("Xóa thành công")
-                    setTimeout(function () { location.reload(); }, 1000);
+                    thongbao("Thành công !", "Xóa danh mục thành công .", "animated fadeInDown", "success");
+                    setTimeout(() => {
+                        location.reload();
+                    },1000)
                 } else {
-                    alert("Danh mục này có chứa các danh mục khác. Không thể xóa");
+                    thongbao("Danh mục này có chứa các danh mục khác. Không thể xóa", "", "animated fadeInDown", "warning");
                 }
 
             },
@@ -27,15 +29,27 @@
 
 $(".addBaseCate").click(function (e) {
     e.preventDefault();
-    var data = new Object();
+    var data = {};
     var formData = $('#formSubmit').serializeArray();
+    var test = true;
+    $("#Images2").text("");
     $.each(formData, function (i, v) {
         $('#' + v.name + "2").text("");
         data["" + v.name + ""] = v.value;
         if (v.value == "") {
+            test = false;
             $('#' + v.name+"2").text("Không được để trống trống");
         }
     });
+    var fakePath = $('#file').val();
+    if (fakePath.length == 0) {
+        test = false;
+        $("#Images2").text("Bạn chưa chọn ảnh");
+    }
+    if (!test) {
+        return;
+    }
+    data.Images = fakePath.slice(fakePath.lastIndexOf("\\")+1, fakePath.length);
     
         $.ajax({
             type: 'POST',
@@ -45,13 +59,13 @@ $(".addBaseCate").click(function (e) {
             dataType: "json",
             success: function (result) {
                 if (result) {
-                    alert("Thêm mới thành công")
+                    thongbao("Thành công !", "Thêm  mới danh mục thành công .", "animated fadeInDown", "success");
                     $.each(formData, function (i, v) {
                         $('#' + v.name).val("");
                     });
                 }
                 else {
-                    alert("Mã danh mục đã tồn tại")
+                    thongbao("Thất bại !", "Mã danh mục đã tồn tại .", "animated fadeInDown", "warning");
                 }
 
             },
@@ -65,15 +79,27 @@ $(".addBaseCate").click(function (e) {
 
 $(".editBaseCate").click(function (e) {
     e.preventDefault();
-    var data = new Object();
+    var data = {};
     var formData = $('#formSubmit').serializeArray();
+    var test = true;
+    $("#Images2").text("");
     $.each(formData, function (i, v) {
         $('#' + v.name + "2").text("");
         data["" + v.name + ""] = v.value;
         if (v.value == "") {
-            $('#' + v.name + "2").text("Không được để trống");
+            test = false;
+            $('#' + v.name + "2").text("Không được để trống trống");
         }
     });
+    var fakePath = $('#file').val();
+    if (fakePath.length == 0) {
+        test = false;
+        $("#Images2").text("Bạn chưa chọn ảnh");
+    }
+    if (!test) {
+        return;
+    }
+    data.Images = fakePath.slice(fakePath.lastIndexOf("\\") + 1, fakePath.length);
 
     $.ajax({
         type: 'POST',
@@ -83,8 +109,10 @@ $(".editBaseCate").click(function (e) {
         dataType: "json",
         success: function (result) {
             if (result) {
-                alert("Sửa thành công")
-                window.location.href = "https://localhost:44316/Admin/CategoryBases";
+                thongbao("Thành công !", "Sửa danh mục thành công .", "animated fadeInDown", "success");
+                setTimeout(() => {
+                    window.location.href = "https://localhost:44316/Admin/CategoryBases";
+                },1000)
             }
 
         },

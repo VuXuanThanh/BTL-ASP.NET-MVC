@@ -18,6 +18,7 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -54,6 +55,10 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Category>()
+                .Property(e => e.Images)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Category>()
                 .HasMany(e => e.Products)
                 .WithRequired(e => e.Category)
                 .WillCascadeOnDelete(false);
@@ -61,6 +66,10 @@ namespace DoNgoaiChinhHang.Areas.Admin.Models
             modelBuilder.Entity<CategoryBase>()
                 .Property(e => e.CategoryBaseID)
                 .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<CategoryBase>()
+                .Property(e => e.Images)
                 .IsUnicode(false);
 
             modelBuilder.Entity<CategoryBase>()

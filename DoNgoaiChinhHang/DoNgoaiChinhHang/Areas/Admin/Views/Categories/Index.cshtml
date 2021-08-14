@@ -46,6 +46,9 @@
                 <table class="table">
                     <tr>
                         <th>
+                            Ảnh
+                        </th>
+                        <th>
                             Tên danh mục cha
                         </th>
                         <th>
@@ -60,6 +63,13 @@
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td>
+                                @{ string imgPath = "~/assets/img/" + item.Images;}
+                                <img src="@Url.Content(imgPath)" style="object-fit: cover;width: 100px; height: 100px" class="img-thumbnail" alt="" />
+                                <br />
+                                @*@Html.DisplayFor(modelItem => item.Images)*@
+
+                            </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.CategoryBase.CategoryBaseName)
                             </td>

@@ -146,6 +146,7 @@
     <Compile Include="Areas\Admin\Models\Order.cs" />
     <Compile Include="Areas\Admin\Models\OrderDetail.cs" />
     <Compile Include="Areas\Admin\Models\Product.cs" />
+    <Compile Include="Areas\Admin\Models\sysdiagram.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -233,6 +234,7 @@
     <Content Include="assets\Admin\js\menu.min.js" />
     <Content Include="assets\Admin\js\modernizr-custom.js" />
     <Content Include="assets\Admin\js\modernizr-custom.min.js" />
+    <Content Include="assets\Admin\js\ThongBaoNoi.js" />
     <Content Include="assets\Admin\pages\accordion.js" />
     <Content Include="assets\Admin\pages\advance-form.js" />
     <Content Include="assets\Admin\pages\animation.js" />
@@ -1098,6 +1100,7 @@
     <Content Include="assets\img\gioi-thieu-tinh-chat-24k-goldzan-ampoule-999-pure-gold-100ml.jpg" />
     <Content Include="assets\img\glucosamine-1500mg-msm-puritans-pride-cua-my-180-vien-bo-xuong-khop.jpg" />
     <Content Include="assets\img\google4_hdpi.png" />
+    <Content Include="assets\img\h0.png" />
     <Content Include="assets\img\hammer-of-thor-cua-nga-chinh-hang-25ml-tang-cuong-sinh-ly-nam.jpg" />
     <Content Include="assets\img\hat-chia-my-seed-nutiva-organic-907g.jpg" />
     <Content Include="assets\img\hat-chia-uc-absolute-organic-huu-co-1kg-giam-can-tang-suc-khoe.jpg" />
