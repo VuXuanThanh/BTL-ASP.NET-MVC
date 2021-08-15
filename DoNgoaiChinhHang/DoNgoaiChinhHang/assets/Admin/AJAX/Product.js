@@ -33,6 +33,7 @@ $(".addPro").click(function (e) {
     $.each(formData, function (i, v) {
         $('#' + v.name + "2").text("");
         data["" + v.name + ""] = v.value;
+       
         if (v.value == "") {
             $('#' + v.name + "2").text("Không được để trống trống");
             test = false;
@@ -42,7 +43,7 @@ $(".addPro").click(function (e) {
     if (!test) {
         return;
     }
-    
+  
         $.ajax({
             type: 'POST',
             url: '/Products/Create2',
@@ -106,3 +107,40 @@ $(".editPro").click(function (e) {
 
 });
 
+function allowdrophere(e) {
+    e.preventDefault();
+}
+
+function drophere(e) {
+    e.preventDefault();
+    var data = e.dataTransfer.getData("Text");
+    e.target.appendChild(document.getElementById(data));
+}
+$(document).ready(function () {
+    if (window.File && window.FileList && window.FileReader) {
+        $("#files").on("change", function (e) {
+            var files = e.target.files,
+                filesLength = files.length;
+            for (var i = 0; i < filesLength; i++) {
+                var f = files[i]
+                var fileReader = new FileReader();
+                fileReader.onload = (function (e) {
+                    var file = e.target;
+                    $("<span class=\"pip\">" +
+                        "<span class=\"remove\">x</span>" +
+                        "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+
+                        "</span>").insertAfter("#files");
+                    $(".remove").click(function () {
+                        $(this).parent(".pip").remove();
+
+                    });
+
+                });
+                fileReader.readAsDataURL(f);
+            }
+        });
+    } else {
+        alert("Your browser doesn't support to File API")
+    }
+});
