@@ -245,7 +245,6 @@ D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\System.Web.WebPages.
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\Newtonsoft.Json.xml
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\Antlr3.Runtime.pdb
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.csproj.AssemblyReference.cache
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.csproj.CoreCompileInputs.cache
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.csproj.CopyComplete
 D:\ASP.NET\BTL\Github\DoNgoaiChinhHang\DoNgoaiChinhHang\obj\Debug\DoNgoaiChinhHang.dll

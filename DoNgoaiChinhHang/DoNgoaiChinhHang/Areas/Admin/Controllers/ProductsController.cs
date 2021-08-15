@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using DoNgoaiChinhHang.Areas.Admin.Models;
 using PagedList;
-
+using System.IO;
 namespace DoNgoaiChinhHang.Areas.Admin.Controllers
 {
     public class ProductsController : Controller
@@ -24,13 +24,44 @@ namespace DoNgoaiChinhHang.Areas.Admin.Controllers
             return View(products.ToPagedList(pageNumber, pageSize));
         }
 
-        
+        //GET
         public ActionResult Create()
         {
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View();
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(HttpPostedFileBase[] files, Product abc)
+        {
+            
+            try
+            {
+                 if (ModelState.IsValid)
+                {
+                    foreach (HttpPostedFileBase file in files)
+                    {
+                        if (file != null)
+                        {
+                            var InputFileName = Path.GetFileName(file.FileName);
+                            var ServerPath = Path.Combine(Server.MapPath("~/wwwroot/Images/" + abc.ProductID + "/")+InputFileName);
+                            file.SaveAs(ServerPath);
+                            ViewBag.UploadStatus = files.Count().ToString() + " files uploaded";
+                        }
+                    }
+                }
+                abc.Image = "~/wwwroot/Images/" + abc.ProductID + "/";
+                db.Products.Add(abc);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }catch(Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View(abc);
+            }
+            
+            
+        }
         public JsonResult Create2(Product abc)
         {
             bool result = false;
@@ -41,6 +72,7 @@ namespace DoNgoaiChinhHang.Areas.Admin.Controllers
             }
             else
             {
+
                 db.Products.Add(abc);
                 db.SaveChanges();
                 result = true;
