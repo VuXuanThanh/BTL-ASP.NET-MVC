@@ -1,0 +1,236 @@
+﻿@model DoNgoaiChinhHang.Areas.Admin.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<style>
+    .form-group row row row {
+        margin-bottom: 20px
+    }
+
+    .addPro {
+        margin-right: 20px
+    }
+    #leftbox {
+        width: 150px;
+        height: 150px;
+        border: 1px solid red;
+        float: left;
+        margin-left: 10px;
+    }
+    input[type="file"] {
+        display: block;
+    }
+
+    .imageThumb {
+        max-height: 75px;
+        border: 2px solid;
+        padding: 1px;
+        cursor: pointer;
+    }
+
+    .pip {
+        display: inline-block;
+        margin: 10px 10px 0 0;
+    }
+
+    .remove {
+        display: block;
+        background: #444;
+        border: 1px solid black;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .remove:hover {
+        background: white;
+        color: black;
+    }
+    .field {
+        background-color: #ffffff;
+        width: 60%;
+        min-width: 450px;
+        position: relative;
+        margin: 50px auto;
+        padding: 50px 20px;
+        border-radius: 7px;
+        box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+    }
+
+    #label {
+        display: block;
+        position: relative;
+        background-color: #025bee;
+        color: #ffffff;
+        font-size: 40px;
+        text-align: center;
+        width: 300px;
+        padding: 18px 0;
+        margin: auto;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+
+<div class="row">
+    <div class="col-sm-12 p-0">
+        <div class="main-header" style="margin-top: 0px;">
+            <h4>Danh mục cha</h4>
+            <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <i class="icofont icofont-home"></i>
+                    </a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#"> Quản lý hàng hóa</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Sản phẩm</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 p0">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-header-text">Thêm mới sản phẩm</h5>
+            </div>
+            <hr style="margin: 0" />
+            <div class="card-block">
+
+                @using (Html.BeginForm("Create", "Products", FormMethod.Post, new { @id = "formSubmit", @autocomplete = "off" }))
+
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger", @id = "CategoryID2" })
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger", @id = "CategoryID2" })
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ProductID, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ProductID, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProductID, "", new { @class = "text-danger", @id = "ProductID2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.CategoryID, "CategoryID", htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger", @id = "CategoryID2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ProductName, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger", @id = "ProductName2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="field" align="left">
+                                <h3>Upload your images</h3>
+                                <input type="file" id="files" name="files[]" multiple accept="image/png, image/jpeg" />
+                                <label for="files" id="label">
+
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </label>
+                            </div>
+                            
+                                @*@Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger", @id = "Image2" })*@
+                           
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Evaluation, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Evaluation, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Evaluation, "", new { @class = "text-danger", @id = "Evaluation2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Brand, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Brand, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Brand, "", new { @class = "text-danger", @id = "Brand2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Orgin, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Orgin, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Orgin, "", new { @class = "text-danger", @id = "Orgin2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger", @id = "Price2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Benefit, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Benefit, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Benefit, "", new { @class = "text-danger", @id = "Benefit2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Introduction, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Introduction, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Introduction, "", new { @class = "text-danger", @id = "Introduction2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Element, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Element, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Element, "", new { @class = "text-danger", @id = "Element2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Tutorial, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Tutorial, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Tutorial, "", new { @class = "text-danger", @id = "Tutorial2" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-2"></div>
+                            <div class="col-sm-10">
+                                <input type="submit" value="Thêm mới" class="btn btn-primary" />
+                                @Html.ActionLink("Quay lại", "Index")
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>
