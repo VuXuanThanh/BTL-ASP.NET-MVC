@@ -16,11 +16,34 @@ namespace DoNgoaiChinhHang.Areas.Admin.Controllers
     {
         private DBContext db = new DBContext();
 
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string sortOrder, string searchString, string currentFilter)
         {
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.SapTheoTen = String.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
+            if(searchString != null)
+            {
+                page = 1;
+            }
+            else {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
             var list = db.CategoryBases.Select(s => s);
-            list = list.OrderBy(s => s.CategoryBaseID);
-            int pageSize = 2;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                list = list.Where(s => s.CategoryBaseName.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "ten_desc":
+                    list = list.OrderByDescending(s => s.CategoryBaseName);
+                    break;
+                default:
+                    list = list.OrderBy(s => s.CategoryBaseName);
+                    break;
+            }
+            int pageSize = 3;
             int pageNumber = (page ?? 1);
 
             return View(list.ToPagedList(pageNumber,pageSize));
