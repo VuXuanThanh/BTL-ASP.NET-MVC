@@ -36,10 +36,16 @@
     <link rel="canonical" href="https://dongoaichinhhang.com/">
     <meta name="google-site-verification" content="48AkW556P7kUC2XfA3_8bpBMX2XeGCO_8XJQoltUfGU">
     <meta name="google-site-verification" content="b2WIN4dMcuVfhhWhoKnWYe5bcXApK2sOByZDzj-Z0KA">
-    <link rel="stylesheet" href="~/assets/css/cart.min.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="~/assets/css/menu.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="~/assets/css/styles4.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="~/assets/css/owl-carousel.css" type="text/css" media="screen">
+   @* <link rel="stylesheet" href="./assets/css/cart.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/css/menu.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/css/styles4.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./assets/css/owl-carousel.css" type="text/css" media="screen">*@
+
+    @*<link href="~/assets/css/cart.min.css" rel="stylesheet" />
+    <link href="~/assets/css/menu.css" rel="stylesheet" />
+    <link href="~/assets/css/styles4.css" rel="stylesheet" />
+    <link href="~/assets/css/owl-carousel.css" rel="stylesheet" />*@
+
     <meta name="theme-color" content="#ff0000">
     <script type="text/javascript" async="" src="./assets/js/analytics.js.tải xuống"></script>
     <script type="text/javascript" async="" src="./assets/js/f.txt"></script>
@@ -49,7 +55,9 @@
     <script src="./assets/js/common.js(1).tải xuống"></script>
     <link rel="manifest" href="https://dongoaichinhhang.com/manifest.json">
     <script type="text/javascript">if ('serviceWorker' in navigator) { window.addEventListener('load', function () { navigator.serviceWorker.register('/sw4.js').then(function (registration) { console.log('ServiceWorker registration successful with scope: ', registration.scope) }).catch(function (err) { console.log('ServiceWorker registration failed: ', err) }) }) }</script>
-    <link rel="stylesheet" href="./assets/css/home.css" type="text/css" media="screen">
+   @* <link rel="stylesheet" href="./assets/css/home.css" type="text/css" media="screen">*@
+
+    <link href="~/assets/css/home.css" rel="stylesheet" />
     <script async="" src="./assets/js/js(2)"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-833009878');</script>
     <script>gtag('event', 'page_view', { 'send_to': 'AW-833009878', 'user_id': '', 'value': '', 'items': [{ 'id': '', 'google_business_vertical': 'retail' }] });</script>
@@ -57,14 +65,14 @@
     <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-137604948-1');</script>
     <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '299092611415381'); fbq('track', 'PageView');</script>
     <noscript>
-        <img height="1" width="1" style="display:none"
+      <img height="1" width="1" style="display:none"
              src="https://www.facebook.com/tr?id=299092611415381&ev=PageView&noscript=1" />
     </noscript>
     <script src="./assets/js/f(1).txt"></script>
     <script src="./assets/js/f(2).txt"></script>
 </head>
 
-<body class="">
+<body>
     <div id="wrapper_content_page">
         <div id="sticky-wrapper" class="sticky-wrapper" style="height: 56px;">
             <header style="width: 1519px; position: fixed; top: 0px; z-index: 999;">
@@ -80,7 +88,7 @@
                                     <div class="line"><i></i><i></i><i></i><i></i></div><span> </span>
                                 </div>
                             </div>
-                        </div><a class="logo" title="dongoaichinhhang.com" href="https://dongoaichinhhang.com/">
+                        </div><a class="logo" title="dongoaichinhhang.com" href="/Home">
                           
                                   <img src="~/assets/img/dongoaichinhhang.png" />
                         </a><img id="sSrch"
@@ -324,7 +332,7 @@
         <span class="p-latitude latitude">14.058324</span>,<span class="p-longitude longitude">108.277199</span>
     </span>
     <div id="cart_sidebar_html">
-        <div class="cart-sidebar">
+        <div class="cart-sidebar ">
             <div id="cart-loading hide"></div>
             <div class="widget-wrapper">
                 <div id="cart-info" class="cart-info">
@@ -363,7 +371,7 @@
 
                     <div class="buttons">
                         <a href="https://dongoaichinhhang.com/gio-hang.html" class="btn-pay"
-                           title="thanh toán">TIẾN HÀNH ĐẶT HÀNG</a><a href="https://dongoaichinhhang.com/#"
+                           title="thanh toán">TIẾN HÀNH ĐẶT HÀNG</a><a href="/"
                                                                        onclick="return hideCart()" class="btn-viewcart hidden-lg hidden-md hidden-desktop"
                                                                        title="đóng giỏ hàng">ĐÓNG</a>
                     </div>
@@ -385,8 +393,18 @@
     <script src="./assets/js/script.js.tải xuống"></script>
     <script type="text/javascript">$(function () { var win = $(window); var loaded = 0; var loadedScrollTop = 0; win.scroll(function () { loadedScrollTop = 1; if ($(window).scrollTop() + window.innerHeight + 10 >= $('#show-fp').position().top && loaded == 0) { $('.show-map').html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1333.2537272719658!2d106.69780835760047!3d10.806865894974957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c093fdafb9%3A0xbf42d864713572e1!2zMTEvNzEgQsO5aSDEkMOsbmggVHXDvSwgUGjGsOG7nW5nIDEyLCBCw6xuaCBUaOG6oW5oLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1550808182143" width="600" height="110" frameborder="0" style="border:0;max-width:100%" allowfullscreen></iframe>'); loaded = 1; } }); });</script>
     @*<script type="application/ld+json">{"@context": "http://schema.org","@type": "LocalBusiness","priceRange":"$$","image":"https://dongoaichinhhang.com/images/dongoaichinhhang.com192x192.png","name" : "dongoaichinhhang.com","telephone": "+84 983 667 466","address": {"@type": "PostalAddress","streetAddress": "11/71 Bùi Đình Túy, P.12, Bình Thạnh","addressLocality": "Hồ Chí Minh"}}</script>
+
         <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","name":"Đồ Ngoại Chính Hãng","url":"https://dongoaichinhhang.com/","potentialAction": [{ "@type": "SearchAction","target": "/tim-kiem.html?tk={search_term_string}","query-input": "required name=search_term_string"}]}</script>*@
+    <script>
+      @*  var bodyElement = document.querySelector('body');
+        console.log(bodyElement);
+        bodyElement.classList.add('cart-opened');
+        var cartElement = document.querySelector('.cart-sidebar');
+        cartElement.classList.add('opened');*@
+    </script>
 </body>
-<div style="position: absolute; top: 0px;"></div>
+<div style="position: absolute; top: 0px;">
+    123
+</div>
 
 </html>
