@@ -1,20 +1,12 @@
-﻿using DoNgoaiChinhHang.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace DoNgoaiChinhHang.Controllers
 {
     public class HomeController : Controller
     {
-        private DoNgoaiChinhHangDB db = new DoNgoaiChinhHangDB();
         public ActionResult Index()
         {
-            ViewBag.categoryBases = db.CategoryBases.ToList();
-            var products = db.Products.ToList();
-            return View(products);
+            return View();
         }
 
         public ActionResult About()
